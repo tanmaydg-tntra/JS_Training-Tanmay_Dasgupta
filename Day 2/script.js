@@ -3,7 +3,6 @@ const cartArray = [];
 
 const product_list = document.getElementById("product_list");
 const cart_list = document.getElementById("cart_list");
-const calculate = document.getElementById("calculate");
 const calculatedResult = document.getElementById("calculatedResult");
 
 const fetchProducts = async ()=>{
@@ -92,12 +91,9 @@ const renderCart = () => {
 
     cart_list.appendChild(cartElement);
   }
-};
-
-calculate.addEventListener("click", () => {
   const result = calculateDiscount();
   printResult(result);
-});
+};
 
 const calculateDiscount = () => {
   let total = 0;
